@@ -18,9 +18,8 @@ echo " start server       "
 echo "####################"
 
 pm2 stop webhook
-pm2 delete webhook
 sleep 1
-pm2 start webhook
+pm2 start webhook.js
 
 sleep 2
 pm2 list
