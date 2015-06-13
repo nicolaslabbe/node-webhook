@@ -7,42 +7,19 @@ error_exit() {
 }
 
 echo "####################"
-echo "install npm package"
+echo "git pull            "
 echo "####################"
-echo "git update to master"
 git pull origin master
 
 echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)"
 
 echo "####################"
-echo "install npm package"
-echo "####################"
-
-# NODE_ENV=development npm prune || error_exit "error pruning"
-
-# echo 'npm install:'
-# NODE_ENV=development npm install || error_exit "error updating npm dependencies"
-
-# echo 'local outdated:'
-# NODE_ENV=development npm outdated --depth=0 || error_exit "error fetching npm outdated (local)"
-
-# echo 'global outdated:'
-# NODE_ENV=development npm outdated -g --depth=0 || error_exit "error fetching npm outdated (global)"
-
-# echo "####################"
-# echo " build tasks        "
-# echo "####################"
-
-# NODE_ENV=development npm run init || error_exit "init project"
-
-echo "####################"
 echo " start server       "
 echo "####################"
 
-pm2 stop all
-pm2 delete all
-
-# NODE_ENV=development npm run build || error_exit "start server"
+pm2 stop webhook
+sleep 1
+pm2 start webhook
 
 sleep 2
 pm2 list
