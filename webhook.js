@@ -1,6 +1,8 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({ path: '/webhook', secret: 'pixelart' })
+var spawn = require('child_process').spawn
+var _ = require('underscore'); // for some utility goodness
 
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
@@ -30,4 +32,9 @@ handler.on('issues', function (event) {
 var events = require('github-webhook-handler/events')
 Object.keys(events).forEach(function (event) {
   console.log(event, '=', events[event])
+
+  // var deploySh = spawn('sh', [ 'deploy.sh' ], {
+  //   cwd: process.env.HOME + '/myProject',
+  //   env:_.extend(process.env, { PATH: process.env.PATH + ':/usr/local/bin' })
+  // });
 })
