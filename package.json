@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nicolaslabbe/node-webhook/issues"
   },
-  "homepage": "https://github.com/nicolaslabbe/node-webhook#readme"
+  "homepage": "https://github.com/nicolaslabbe/node-webhook#readme",
+  "dependencies": {
+    "github-webhook-handler": "^0.4.0"
+  }
 }
