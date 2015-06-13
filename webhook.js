@@ -1,3 +1,5 @@
+// test 8
+
 var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({ path: '/webhook', secret: 'pixelart' })
@@ -33,5 +35,3 @@ handler.on('issues', function (event) {
     event.payload.issue.number,
     event.payload.issue.title)
 })
-
-// test 7
