@@ -26,3 +26,8 @@ handler.on('issues', function (event) {
     event.payload.issue.number,
     event.payload.issue.title)
 })
+
+var events = require('github-webhook-handler/events')
+Object.keys(events).forEach(function (event) {
+  console.log(event, '=', events[event])
+})
