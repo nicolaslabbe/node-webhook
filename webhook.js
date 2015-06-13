@@ -19,6 +19,11 @@ handler.on('push', function (event) {
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
     event.payload.ref)
+
+  var deploySh = spawn('sh', [ 'deploy.sh' ], {
+    cwd: process.env.HOME + '/myProject',
+    env:_.extend(process.env, { PATH: process.env.PATH + ':/usr/local/bin' })
+  });
 })
 
 handler.on('issues', function (event) {
@@ -27,14 +32,4 @@ handler.on('issues', function (event) {
     event.payload.action,
     event.payload.issue.number,
     event.payload.issue.title)
-})
-
-var events = require('github-webhook-handler/events')
-Object.keys(events).forEach(function (event) {
-  console.log(event, '=', events[event])
-
-  // var deploySh = spawn('sh', [ 'deploy.sh' ], {
-  //   cwd: process.env.HOME + '/myProject',
-  //   env:_.extend(process.env, { PATH: process.env.PATH + ':/usr/local/bin' })
-  // });
 })
