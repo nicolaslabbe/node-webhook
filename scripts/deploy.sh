@@ -6,13 +6,19 @@ error_exit() {
   exit 1
 }
 
+echo "####################"
+echo "install npm package"
+echo "####################"
+echo "git update to master"
+git pull origin master
+
 echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)"
 
 echo "####################"
 echo "install npm package"
 echo "####################"
 
-NODE_ENV=development npm prune || error_exit "error pruning"
+# NODE_ENV=development npm prune || error_exit "error pruning"
 
 # echo 'npm install:'
 # NODE_ENV=development npm install || error_exit "error updating npm dependencies"
