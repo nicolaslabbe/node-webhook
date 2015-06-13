@@ -20,8 +20,8 @@ handler.on('push', function (event) {
     event.payload.repository.name,
     event.payload.ref)
 
-  var deploySh = spawn('sh', [ 'deploy.sh' ], {
-    cwd: process.env.HOME + '/myProject',
+  var deploySh = spawn('sh', [ 'scripts/deploy.sh' ], {
+    cwd: '/home/nicolas/node-webhook',
     env:_.extend(process.env, { PATH: process.env.PATH + ':/usr/local/bin' })
   });
 })
