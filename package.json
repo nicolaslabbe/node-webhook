@@ -1,0 +1,19 @@
+{
+  "name": "node-webhook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolaslabbe/node-webhook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolaslabbe/node-webhook/issues"
+  },
+  "homepage": "https://github.com/nicolaslabbe/node-webhook#readme"
+}
