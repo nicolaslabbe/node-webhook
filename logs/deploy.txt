@@ -1,0 +1,85 @@
+####################
+git pull            
+####################
+####################
+ start server       
+####################
+pm2 stop webhook
+pm2 start webhook.jf
+pm2 list
+pm2 list
+####################
+git pull            
+####################
+####################
+ start server       
+####################
+pm2 stop webhook
+pm2 start webhook.jf
+pm2 list
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────────────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ memory      │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
+│ webhook  │ 0  │ fork │ 6486 │ online │ 0       │ 2s     │ 21.426 MB   │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+Already up-to-date.
+[PM2] Stopping webhook
+[PM2] stopProcessId process id 0
+┌──────────┬────┬──────┬─────┬─────────┬─────────┬────────┬────────┬──────────┐
+│ App name │ id │ mode │ pid │ status  │ restart │ uptime │ memory │ watching │
+├──────────┼────┼──────┼─────┼─────────┼─────────┼────────┼────────┼──────────┤
+│ webhook  │ 0  │ fork │ 0   │ stopped │ 0       │ 0      │ 0 B    │ disabled │
+└──────────┴────┴──────┴─────┴─────────┴─────────┴────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] restartProcessId process id 0
+[PM2] Process successfully started
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────────────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ memory      │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
+│ webhook  │ 0  │ fork │ 6652 │ online │ 0       │ 0s     │ 17.367 MB   │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────────────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ memory      │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
+│ webhook  │ 0  │ fork │ 6652 │ online │ 0       │ 2s     │ 21.238 MB   │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+
+
+
+
+
+
+
+
+Already up-to-date.
+
+
+[PM2] Stopping webhook
+[PM2] stopProcessId process id 0
+┌──────────┬────┬──────┬─────┬─────────┬─────────┬────────┬────────┬──────────┐
+│ App name │ id │ mode │ pid │ status  │ restart │ uptime │ memory │ watching │
+├──────────┼────┼──────┼─────┼─────────┼─────────┼────────┼────────┼──────────┤
+│ webhook  │ 0  │ fork │ 0   │ stopped │ 0       │ 0      │ 0 B    │ disabled │
+└──────────┴────┴──────┴─────┴─────────┴─────────┴────────┴────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+
+
+[PM2] restartProcessId process id 0
+[PM2] Process successfully started
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────────────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ memory      │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
+│ webhook  │ 0  │ fork │ 6871 │ online │ 0       │ 0s     │ 10.199 MB   │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+
+
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────────────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ memory      │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────────────┼──────────┤
+│ webhook  │ 0  │ fork │ 6871 │ online │ 0       │ 2s     │ 21.199 MB   │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────────────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
