@@ -2,7 +2,7 @@
 # . ./.env
 
 error_exit() {
-  echo "$1" 1>&2 >> logs/deploy.txt
+  "$1" 1>&2 >> logs/deploy.txt
   exit 1
 }
 
