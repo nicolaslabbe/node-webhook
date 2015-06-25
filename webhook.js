@@ -28,7 +28,7 @@ fs.readdir('logs', function(err, files) {
   http.createServer(function (req, res) {
     handler(req, res, function (err) {
       res.statusCode = 404
-      res.end('no such location')
+      res.end('no such location 1')
     })
   }).listen(7777)
 
