@@ -37,6 +37,7 @@ fs.readdir('logs', function(err, files) {
   })
 
   handler.on('push', function (event) {
+    util.log(event);
     writeLogs('Received a push event for ' + event.payload.repository.name + ' to ' + event.payload.ref + '');
     util.log('Received a push event for %s to %s',
       event.payload.repository.name,
