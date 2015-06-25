@@ -13,7 +13,7 @@ function writeLogs(log) {
 
   var stream = fs.createWriteStream("./logs/webhook.txt", { 'flags': flags, 'encoding': null, 'mode': 0666});
   stream.once('open', function(fd) {
-    stream.write('[ ' + new Date() + ' ] ' + log);
+    stream.write('[ ' + new Date() + ' ] ' + log + '\n');
     stream.end();
   });
 }
