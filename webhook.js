@@ -33,12 +33,12 @@ fs.readdir('logs', function(err, files) {
   }).listen(7777)
 
   handler.on('error', function (err) {
-    util.debug('Error:', err.message)
+    util.log('Error:', err.message)
   })
 
   handler.on('push', function (event) {
     writeLogs('Received a push event for ' + event.payload.repository.name + ' to ' + event.payload.ref + '');
-    util.debug('Received a push event for %s to %s',
+    util.log('Received a push event for %s to %s',
       event.payload.repository.name,
       event.payload.ref)
 
@@ -50,7 +50,7 @@ fs.readdir('logs', function(err, files) {
 
   handler.on('issues', function (event) {
     writeLogs('Received an issue event for %s action=%s: #%d %s');
-    util.debug('Received an issue event for ' + event.payload.repository.name + ' action=' + event.payload.action + ': #' + event.payload.issue.number + ' ' + event.payload.issue.title,
+    util.log('Received an issue event for ' + event.payload.repository.name + ' action=' + event.payload.action + ': #' + event.payload.issue.number + ' ' + event.payload.issue.title,
       event.payload.repository.name,
       event.payload.action,
       event.payload.issue.number,
