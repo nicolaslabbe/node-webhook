@@ -6,6 +6,7 @@ error_exit() {
   exit 1
 }
 
+mkdir logs
 rm logs/deploy.txt
 pwd >> logs/deploy.txt
 

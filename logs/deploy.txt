@@ -1,6 +1,0 @@
-/Users/nicolas/Documents/programmation/test/node-webhook
-
-
-Already up-to-date.
-deploying on development with user nicolas using v0.12.4
-error restart webhook
