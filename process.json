@@ -4,6 +4,7 @@
     "script": "webhook.js",
     "instances" : 1,
     "exec_interpreter" : "node",
-    "exec_mode"  : "fork"
+    "exec_mode"  : "fork",
+    "args": ["-x"]
   }
 ]
