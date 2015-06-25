@@ -23,9 +23,11 @@ echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)" >> log
 
 echo "\n" >> logs/deploy.txt
 pm2 restart webhook.js >> logs/deploy.txt
+sleep 4
 
 # "pm2 list"
 echo "\n" >> logs/deploy.txt
 pm2 list >> logs/deploy.txt
+sleep 4
 
 exit
