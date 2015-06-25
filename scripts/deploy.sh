@@ -15,12 +15,9 @@ sleep 2
 
 echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)" >> logs/deploy.txt
 
-pm2 restart webhook.js || error_exit "error restart webhook"
+pm2 startOrRestart process.js >> logs/deploy.txt || error_exit "error restart webhook"
 sleep 2
-echo "\n pm2 restart webhook.js" >> logs/deploy.txt
 
 pm2 list || error_exit "error pm2 list"
-sleep 2
-echo "\n pm2 list" >> logs/deploy.txt
 
 exit
