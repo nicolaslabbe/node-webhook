@@ -5,6 +5,8 @@ error_exit() {
   echo "$1" 1>&2
   exit 1
 }
+
+rm logs/deploy.txt
 echo "\n\n\n\n\n" >> logs/deploy.txt
 echo $USER >> logs/deploy.txt
 
@@ -22,6 +24,7 @@ echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)"
 
 # "pm2 stop webhook"
 echo "\n" >> logs/deploy.txt
+pm2 stop webhook >> logs/deploy.txt
 pm2 stop webhook >> logs/deploy.txt
 # "pm2 start webhook.js"
 echo "\n" >> logs/deploy.txt
