@@ -7,7 +7,6 @@ error_exit() {
 }
 
 rm logs/deploy.txt
-echo "\n\n\n\n\n" >> logs/deploy.txt
 echo $USER >> logs/deploy.txt
 
 # "####################"
@@ -16,21 +15,14 @@ echo $USER >> logs/deploy.txt
 echo "\n" >> logs/deploy.txt
 git pull origin master >> logs/deploy.txt
 
-echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)"
+echo "deploying on ${NODE_ENV} with user ${USER} using $(node --version)" >> logs/deploy.txt
 
 # "####################"
 # " start server       "
 # "####################"
 
-# "pm2 stop webhook"
 echo "\n" >> logs/deploy.txt
-pm2 stop webhook >> logs/deploy.txt
-# "pm2 stop webhook"
-echo "\n" >> logs/deploy.txt
-pm2 delete webhook >> logs/deploy.txt
-# "pm2 start webhook.js"
-echo "\n" >> logs/deploy.txt
-pm2 start webhook.js >> logs/deploy.txt
+pm2 restart webhook.js >> logs/deploy.txt
 
 # "pm2 list"
 echo "\n" >> logs/deploy.txt
