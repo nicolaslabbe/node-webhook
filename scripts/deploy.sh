@@ -31,3 +31,5 @@ sleep 2
 # "pm2 list"
 echo "\n" >> logs/deploy.txt
 pm2 list >> logs/deploy.txt
+
+exit 0
