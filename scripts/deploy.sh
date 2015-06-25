@@ -7,7 +7,7 @@ error_exit() {
 }
 
 rm logs/deploy.txt
-echo $USER >> logs/deploy.txt
+echo pwd >> logs/deploy.txt
 
 # "####################"
 # "git pull            "
