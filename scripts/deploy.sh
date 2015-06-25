@@ -6,6 +6,7 @@ error_exit() {
   exit 1
 }
 echo "\n\n\n\n\n" >> logs/deploy.txt
+echo $USER >> logs/deploy.txt
 
 # "####################"
 # "git pull            "
